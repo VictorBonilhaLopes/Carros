@@ -1,0 +1,32 @@
+html    
+    head      
+
+        title Lista 
+        
+    body        
+        h1 Lista de Carros 
+        
+        a(href = '/') Home <br>
+        a(href = '/Carros/formNew') Novo Cadastro de Carro <br><br>
+
+        table 
+            thead
+                tr 
+                    th Modelo 
+                    th Marca 
+                    th Valor 
+                    th &nbsp;
+                    th &nbsp;
+
+            tbody
+                each carros in carro
+                    tr   
+                        td= carros.modelo 
+                        td= carros.marca 
+                        td= carros.valor 
+                        td
+                         a(href=`/Carros/formEdit/${carros.id}`)
+                            button(type='button') Alterar
+                        td
+                         a(href=`/carros/deletar/${carros.id}`)
+                            button(type='button') Deletar

@@ -1,0 +1,20 @@
+html    
+    head      
+        title Novo 
+    body        
+        h1 Novo 
+        
+        a(href = '/') Home <br>
+        a(href = '/Carros/list') Lista de Carros <br><br>
+
+        form(action="/carros/create", method = "post")
+            label Nome 
+                input(name = 'modelo', requerid, type="text")
+            <br>
+            label Marca
+                input(name = 'marca', requerid, type="text") 
+            <br> 
+            label Valor 
+                input(name = 'valor', requerid, type="text")    
+            <br>
+            button(type='submit') Salvar 
